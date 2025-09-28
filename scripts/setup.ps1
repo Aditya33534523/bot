@@ -1,0 +1,1 @@
+Write-Host 'Follow README to setup the project'
