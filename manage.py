@@ -2,11 +2,11 @@
 import os
 import sys
 
-# Fix for Python 3.13 compatibility with Django 3.2
-try:
-    import cgi_fix
-except ImportError:
-    pass
+# Add the current directory to Python path
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+
+# Import CGI fix BEFORE any Django imports
+import cgi_fix
 
 if __name__ == '__main__':
     os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'healthcare_platform.settings')

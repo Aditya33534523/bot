@@ -13,7 +13,8 @@ class Patient(BaseMongoModel):
     district = models.CharField(max_length=100, blank=True)
     
     class Meta:
-        collection_name = 'patients'
+        db_table = 'patients'  # Change this from collection_name
+        abstract = False
 
 class PatientInteraction(BaseMongoModel):
     patient_phone = models.CharField(max_length=17)
@@ -25,4 +26,5 @@ class PatientInteraction(BaseMongoModel):
     confidence_score = models.FloatField(null=True, blank=True)
     
     class Meta:
-        collection_name = 'patient_interactions'
+        db_table = 'patient_interactions'  # Change this from collection_name
+        abstract = False
