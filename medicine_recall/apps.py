@@ -1,4 +1,5 @@
 from django.apps import AppConfig
+
 class MedicineRecallConfig(AppConfig):
-    default_auto_field='django.db.models.BigAutoField'
-    name='medicine_recall'
+    default_auto_field = 'django.db.models.BigAutoField'
+    name = 'medicine_recall'

@@ -4,3 +4,9 @@ pymongo==4.6.1
 python-decouple==3.8
 requests==2.31.0
 djangorestframework==3.14.0
+django-cors-headers
+celery
+redis
+cryptography
+qrcode[pil]
+pywin32
