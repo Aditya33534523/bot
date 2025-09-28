@@ -1,5 +1,13 @@
 #!/usr/bin/env python
-import os, sys
+import os
+import sys
+
+# Fix for Python 3.13 compatibility with Django 3.2
+try:
+    import cgi_fix
+except ImportError:
+    pass
+
 if __name__ == '__main__':
     os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'healthcare_platform.settings')
     try:
